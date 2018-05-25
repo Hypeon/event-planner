@@ -1,10 +1,25 @@
 package beans;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+
+/**
+ * -- Database related knowledge --
+ *
+ * 1. Cascade operations - the same operation is applied to related entities
+ * 	E.g: If I delete Event, Location also should be deleted.
+ *		Cascade Types: PERSIST, REMOVE, REFRESH, DETACH, MERGE, ALL
+ *
+ * 2. Fetch types:
+ * 		Eager - retrieves everything
+ * 		Lazy - retrieve on request
+ *
+ * 	3. Relationship directions:
+ * 		- Uni-Directional - data can be accessed from
+ * 		  only one of related entities
+ * 		- Bi-Directional - data can be accessed from both related entities
+ */
 
 @Entity
 public class Event {

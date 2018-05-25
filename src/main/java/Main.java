@@ -7,6 +7,17 @@ import org.hibernate.cfg.Configuration;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * -- Entity Lifecycle --
+ * 	1. Detach - entity not associated with Hibernate session
+ *  2. Merge - if entity detached, merge will reattach it to session
+ *  3. Persist - transitions new entity do managed state;
+ * 		next flush/commit will save it in db
+ *  4. Remove - transitions entity to be removed;
+ *  	next flush/commit will delete it from db
+ *  5. Refresh - reload/sync object with data from db
+ */
+
 public class Main {
 
     public static void main(String[] args) {
