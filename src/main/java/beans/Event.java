@@ -27,7 +27,7 @@ public class Event {
 	@Id
 	@Column(name = "event_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int eventId;
 	
 	@Column(name = "name")
 	private String name;
@@ -56,12 +56,12 @@ public class Event {
 		this.location = location;
 	}
 	
-	public int getId() {
-		return id;
+	public int getEventId() {
+		return eventId;
 	}
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
 	}
 	
 	public String getName() {
@@ -107,7 +107,7 @@ public class Event {
 	@Override
 	public String toString() {
 		return "Event{" +
-					   "id=" + id +
+					   "eventId=" + eventId +
 					   ", name='" + name + '\'' +
 					   ", description='" + description + '\'' +
 					   ", dateTimeOfEvent=" + dateTimeOfEvent +

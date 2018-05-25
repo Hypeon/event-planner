@@ -8,7 +8,7 @@ public class Location {
 	@Id
 	@Column(name = "location_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int locationId;
 	
 	@Column(name = "name")
 	private String name;
@@ -17,7 +17,7 @@ public class Location {
 	private String address;
 	
 	@Column(name = "lat")
-	private float lattitude;
+	private float latitude;
 	
 	@Column(name = "len")
 	private float length;
@@ -26,19 +26,19 @@ public class Location {
 	public Location() {
 	}
 	
-	public Location(String name, String address, float lattitude, float length) {
+	public Location(String name, String address, float latitude, float length) {
 		this.name = name;
 		this.address = address;
-		this.lattitude = lattitude;
+		this.latitude = latitude;
 		this.length = length;
 	}
 	
-	public int getId() {
-		return id;
+	public int getLocationId() {
+		return locationId;
 	}
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setLocationId(int locationId) {
+		this.locationId = locationId;
 	}
 	
 	public String getName() {
@@ -57,12 +57,12 @@ public class Location {
 		this.address = address;
 	}
 	
-	public float getLattitude() {
-		return lattitude;
+	public float getLatitude() {
+		return latitude;
 	}
 	
-	public void setLattitude(float lattitude) {
-		this.lattitude = lattitude;
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
 	}
 	
 	public float getLength() {
